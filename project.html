@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Pasteurizer (WAPI) — GHE for Practitioners | ETH Zurich</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .project-detail { padding: 2.5rem 0 4rem; background: white; }
+    .detail-back { font-size: 0.875rem; color: var(--text-light); margin-bottom: 1.75rem; display: inline-flex; align-items: center; gap: 0.35rem; }
+    .detail-back:hover { color: var(--olive); text-decoration: none; }
+
+    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .detail-image { border-radius: 10px; overflow: hidden; border: 1px solid var(--warm-100); }
+    .detail-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+
+    .detail-cat-badge {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+      padding: 0.25rem 0.65rem; border-radius: 4px; color: white; background: var(--c-water);
+      margin-bottom: 0.75rem;
+    }
+    .detail-title { font-size: 1.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.75rem; color: var(--text); }
+    .detail-lead { font-size: 1rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 1.5rem; }
+
+    .detail-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 1.5rem; margin-bottom: 1.75rem; }
+    .spec-item { display: flex; flex-direction: column; gap: 0.15rem; }
+    .spec-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-light); }
+    .spec-value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+
+    .detail-download {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--olive); color: white;
+      padding: 0.75rem 1.5rem; border-radius: 6px;
+      font-size: 1rem; font-weight: 700; text-decoration: none;
+      transition: background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .detail-download:hover { background: var(--forest); text-decoration: none; color: white; }
+
+    .detail-body { margin-top: 3rem; border-top: 1px solid var(--warm-100); padding-top: 2.5rem; }
+    .detail-body h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; color: var(--text); }
+    .detail-body p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 1rem; }
+
+    .detail-columns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
+    .detail-col h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); border-bottom: 2px solid var(--warm-100); padding-bottom: 0.4rem; }
+    .detail-col ul { list-style: none; padding: 0; }
+    .detail-col li { font-size: 0.875rem; color: var(--text-mid); padding: 0.3rem 0; border-bottom: 1px solid var(--warm-50); display: flex; align-items: baseline; gap: 0.5rem; }
+    .detail-col li::before { content: "–"; color: var(--text-light); flex-shrink: 0; }
+
+    .placeholder-note {
+      background: var(--warm-50); border: 1px solid var(--warm-100); border-radius: 6px;
+      padding: 1rem 1.25rem; font-size: 0.875rem; color: var(--text-mid);
+      margin-bottom: 1.5rem; font-style: italic;
+    }
+
+    @media (max-width: 800px) {
+      .detail-grid { grid-template-columns: 1fr; }
+      .detail-columns { grid-template-columns: 1fr; }
+      .detail-specs { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== INSTITUTIONAL TOP BAR ===== -->
+<div class="eth-topbar">
+  <div class="container">
+    <a href="https://ethz.ch/en.html">ETH Zurich</a>
+    <span class="sep">&#8250;</span>
+    <a href="https://mavt.ethz.ch/">D-MAVT</a>
+    <span class="sep">&#8250;</span>
+    <a href="https://ghe.ethz.ch/">Global Health Engineering</a>
+    <span class="sep">&#8250;</span>
+    <span style="color:rgba(255,255,255,0.55)">For Practitioners</span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="header-brand">
+      <img src="ghe_logo.jpg" alt="Global Health Engineering" class="site-logo" width="100" height="56">
+      <span class="site-subtitle" data-i18n="header.subtitle">ETH Zurich · For Practitioners</span>
+    </a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="fr">Français</button>
+      <button class="lang-btn" data-lang="es">Español</button>
+      <button class="lang-btn" data-lang="sw">Kiswahili</button>
+      <button class="lang-btn" data-lang="ny">Chichewa</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <div class="container">
+    <ul class="nav-list">
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="projects.html" class="active" data-i18n="nav.projects">All Projects</a></li>
+      <li><a href="https://ghe.ethz.ch/" data-i18n="nav.about">About GHE</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== PROJECT DETAIL ===== -->
+<div class="search-bar-section">
+  <div class="container">
+    <a href="projects.html" class="detail-back" data-i18n="detail.back">← Back to all projects</a>
+  </div>
+</div>
+
+<main class="project-detail">
+  <div class="container">
+
+    <!-- Image + key info -->
+    <div class="detail-grid">
+      <div class="detail-image">
+        <img src="https://loremflickr.com/800/500/solar,water?lock=1" alt="Solar Pasteurizer (WAPI)">
+      </div>
+      <div class="detail-info">
+        <span class="detail-cat-badge">Water</span>
+        <h1 class="detail-title">Solar Pasteurizer (WAPI)</h1>
+        <p class="detail-lead">A simple, low-cost device that uses a small wax indicator to confirm when water has been safely pasteurized using solar heat. No fuel, no electricity, and no moving parts required.</p>
+
+        <div class="detail-specs">
+          <div class="spec-item">
+            <span class="spec-label">Difficulty</span>
+            <span class="spec-value">⬤◯◯ Basic</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Build time</span>
+            <span class="spec-value">1–2 days</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Estimated cost</span>
+            <span class="spec-value">USD 2–5</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Treats</span>
+            <span class="spec-value">~1 L per cycle</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Tools required</span>
+            <span class="spec-value">Scissors, needle</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Developed by</span>
+            <span class="spec-value">GHE student project</span>
+          </div>
+        </div>
+
+        <a href="#" class="detail-download" data-i18n="detail.download">⬇ Download Full Plans (PDF)</a>
+      </div>
+    </div>
+
+    <!-- Description + materials + steps -->
+    <div class="detail-body">
+
+      <div class="placeholder-note">
+        This is a template page. Full project descriptions, material lists, and step-by-step instructions will be added for each project.
+      </div>
+
+      <h2>How it works</h2>
+      <p>The WAPI (Water Pasteurization Indicator) is a small plastic tube containing a food-grade wax with a melting point of 70°C. The tube is suspended in the water container during solar heating. When the wax melts and floats to the top, the water has reached pasteurization temperature and is safe to drink — even if it has not boiled.</p>
+      <p>Solar pasteurization requires sustained temperatures above 65°C for several minutes, which kills all major waterborne pathogens including bacteria, viruses, and protozoa. The WAPI provides a reliable visual indicator without any electronic components.</p>
+
+      <div class="detail-columns">
+        <div class="detail-col">
+          <h3>Materials</h3>
+          <ul>
+            <li>Small plastic tube (3–5 cm)</li>
+            <li>Food-grade wax (beeswax or soy)</li>
+            <li>Nylon fishing line (30 cm)</li>
+            <li>Small weight (nut or washer)</li>
+            <li>Cork or stopper</li>
+          </ul>
+        </div>
+        <div class="detail-col">
+          <h3>Tools</h3>
+          <ul>
+            <li>Scissors or craft knife</li>
+            <li>Small saucepan (for wax melting)</li>
+            <li>Needle or thin wire</li>
+            <li>Heat source (stove or fire)</li>
+          </ul>
+        </div>
+        <div class="detail-col">
+          <h3>Key steps</h3>
+          <ul>
+            <li>Melt wax and pour into tube</li>
+            <li>Insert fishing line while wax is liquid</li>
+            <li>Allow to cool and set</li>
+            <li>Attach weight to lower end of line</li>
+            <li>Seal top with cork</li>
+            <li>Calibrate with boiling water test</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="footer-logo-name">GHE for Practitioners</div>
+        <p>Free building plans from ETH Zurich's Global Health Engineering group — for practitioners in low-resource settings.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.cat">Categories</h4>
+        <ul>
+          <li><a href="projects.html?cat=water">💧 Water</a></li>
+          <li><a href="projects.html?cat=agriculture">🌱 Agriculture</a></li>
+          <li><a href="projects.html?cat=waste">♻️ Waste &amp; Sanitation</a></li>
+          <li><a href="projects.html?cat=mushroom">🍄 Mushroom Farming</a></li>
+          <li><a href="projects.html?cat=biogas">🔥 Biogas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.links">Links</h4>
+        <ul>
+          <li><a href="https://ghe.ethz.ch/">GHE Official Site</a></li>
+          <li><a href="https://ghe.ethz.ch/research.html">Research</a></li>
+          <li><a href="mailto:ghe@ethz.ch">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Global Health Engineering, ETH Zurich — <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+      <span><a href="https://ethz.ch/en.html">ETH Zurich</a> · <a href="#">Imprint</a> · <a href="#">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/i18n.js"></script>
+</body>
+</html>

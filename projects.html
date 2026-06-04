@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects — GHE for Practitioners | ETH Zurich</title>
+  <meta name="description" content="Browse all building plans and practical guides from ETH Zurich's Global Health Engineering group.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== INSTITUTIONAL TOP BAR ===== -->
+<div class="eth-topbar">
+  <div class="container">
+    <a href="https://ethz.ch/en.html">ETH Zurich</a>
+    <span class="sep">&#8250;</span>
+    <a href="https://mavt.ethz.ch/">D-MAVT</a>
+    <span class="sep">&#8250;</span>
+    <a href="https://ghe.ethz.ch/">Global Health Engineering</a>
+    <span class="sep">&#8250;</span>
+    <span style="color:rgba(255,255,255,0.55)">For Practitioners</span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="header-brand">
+      <img src="ghe_logo.jpg" alt="Global Health Engineering" class="site-logo" width="100" height="56">
+      <span class="site-subtitle" data-i18n="header.subtitle">ETH Zurich · For Practitioners</span>
+    </a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="fr">Français</button>
+      <button class="lang-btn" data-lang="es">Español</button>
+      <button class="lang-btn" data-lang="sw">Kiswahili</button>
+      <button class="lang-btn" data-lang="ny">Chichewa</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <div class="container">
+    <ul class="nav-list">
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="projects.html" class="active" data-i18n="nav.projects">All Projects</a></li>
+      <li><a href="https://ghe.ethz.ch/" data-i18n="nav.about">About GHE</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== SEARCH + FILTER ===== -->
+<div class="search-bar-section">
+  <div class="container">
+    <div class="search-row">
+      <input type="search" id="project-search" placeholder="Search by name, keyword, or material…" data-i18n-placeholder="search.placeholder" autocomplete="off">
+      <span class="result-count" id="result-count">30 projects</span>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label" data-i18n="search.label">Category:</span>
+      <button class="filter-btn active" data-cat="all" data-i18n="filter.all">All</button>
+      <button class="filter-btn" data-cat="water" data-i18n="filter.water">💧 Water</button>
+      <button class="filter-btn" data-cat="agriculture" data-i18n="filter.agri">🌱 Agriculture</button>
+      <button class="filter-btn" data-cat="waste" data-i18n="filter.waste">♻️ Waste &amp; Sanitation</button>
+      <button class="filter-btn" data-cat="mushroom" data-i18n="filter.mushroom">🍄 Mushroom Farming</button>
+      <button class="filter-btn" data-cat="biogas" data-i18n="filter.biogas">🔥 Biogas</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROJECTS GRID ===== -->
+<main class="projects-page">
+  <div class="container">
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- ============ WATER ============ -->
+      <div class="project-card c-water" data-cat="water" data-keywords="water pasteurizer solar wax wapi drinking purification">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/solar,water?lock=1" alt="Solar Pasteurizer" loading="lazy">
+          <span class="card-cat-badge">Water</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Solar Pasteurizer (WAPI)</div>
+          <div class="card-desc">Uses a wax indicator to confirm water has reached pasteurization temperature using only sunlight. No fuel, no electricity, no moving parts.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1–2 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-water" data-cat="water" data-keywords="water rope pump well shallow manual lift">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/water,well,pump?lock=2" alt="Rope Pump" loading="lazy">
+          <span class="card-cat-badge">Water</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Rope Pump</div>
+          <div class="card-desc">Simple rope-and-washer pump for drawing water from shallow wells up to 15 m deep. Built from PVC pipe and locally available rope and rubber.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–3 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-water" data-cat="water" data-keywords="water filter slow sand biological household treatment">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/water,filter?lock=3" alt="Slow Sand Filter" loading="lazy">
+          <span class="card-cat-badge">Water</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Slow Sand Filter</div>
+          <div class="card-desc">Biological water filter using a layer of fine sand and a bio-layer (schmutzdecke) to remove pathogens. Effective for treating surface water.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 3–5 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-water" data-cat="water" data-keywords="water sodis solar disinfection pet bottle rack uv">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/water,bottle,sun?lock=4" alt="SODIS Bottle Rack" loading="lazy">
+          <span class="card-cat-badge">Water</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">SODIS Bottle Rack</div>
+          <div class="card-desc">Tilted rack that maximises sun exposure for solar disinfection of water in transparent PET bottles. Treats 6 litres per day per rack unit.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ Half a day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-water" data-cat="water" data-keywords="water ceramic pot filter clay silver nanoparticles household">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/clay,pot,water?lock=5" alt="Ceramic Pot Filter" loading="lazy">
+          <span class="card-cat-badge">Water</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Ceramic Pot Filter</div>
+          <div class="card-desc">Clay pot water filter treated with colloidal silver. Removes bacteria, turbidity, and protozoa. Can be produced locally using basic pottery skills.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 3–4 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-water" data-cat="water" data-keywords="rain gauge rainfall measurement monitoring weather">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/rain,weather?lock=6" alt="Rain Gauge" loading="lazy">
+          <span class="card-cat-badge">Water</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Simple Rain Gauge</div>
+          <div class="card-desc">Low-cost rain gauge made from a plastic bottle and ruler. Accurate enough for agricultural planning and local water resource monitoring.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1 hour</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <!-- ============ AGRICULTURE ============ -->
+      <div class="project-card c-agri" data-cat="agriculture" data-keywords="agriculture fencing origami steel flat-pack panel portable livestock crop">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/fence,farm?lock=7" alt="Origami Fencing" loading="lazy">
+          <span class="card-cat-badge">Agriculture</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Origami Fencing</div>
+          <div class="card-desc">Flat-pack steel panels that fold into rigid 3D fencing structures. Stores flat, installs quickly, no specialist tools needed. Protects crops and livestock.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1 day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-agri" data-cat="agriculture" data-keywords="agriculture treadle pump irrigation foot powered shallow water">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/irrigation,agriculture?lock=8" alt="Treadle Pump" loading="lazy">
+          <span class="card-cat-badge">Agriculture</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Treadle Pump</div>
+          <div class="card-desc">Foot-powered piston pump for small-scale irrigation. Draws water from shallow sources up to 7 m deep. No fuel cost — powered entirely by leg motion.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 3–5 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-agri" data-cat="agriculture" data-keywords="agriculture solar dryer crop fruit vegetable grain drying post-harvest">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/solar,drying,food?lock=9" alt="Solar Crop Dryer" loading="lazy">
+          <span class="card-cat-badge">Agriculture</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Indirect Solar Crop Dryer</div>
+          <div class="card-desc">Indirect solar dryer for fruits, vegetables, and grains. Reduces post-harvest losses by 40–60%. Heated air passes over the crop without direct sun exposure.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 3–4 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-agri" data-cat="agriculture" data-keywords="agriculture cooler evaporative zeer pot produce storage cooling">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/clay,pot,vegetables?lock=10" alt="Evaporative Cooler" loading="lazy">
+          <span class="card-cat-badge">Agriculture</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Evaporative Cooler (Zeer Pot)</div>
+          <div class="card-desc">Pot-in-pot cooler using evaporation to keep produce fresh without electricity. Extends shelf life of vegetables by several days. Built from two clay pots and sand.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1–2 hours</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-agri" data-cat="agriculture" data-keywords="agriculture thresher grain manual sorghum maize wheat hand tool">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/grain,harvest?lock=11" alt="Manual Grain Thresher" loading="lazy">
+          <span class="card-cat-badge">Agriculture</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Manual Grain Thresher</div>
+          <div class="card-desc">Hand-operated thresher for separating sorghum, maize, and wheat from stalks. 5–8× faster than hand-beating. Made from steel rod and locally sourced wood.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–3 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-agri" data-cat="agriculture" data-keywords="agriculture seedling tray propagation nursery planting low cost">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/seedling,nursery?lock=12" alt="Seedling Tray" loading="lazy">
+          <span class="card-cat-badge">Agriculture</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Low-Cost Seedling Tray</div>
+          <div class="card-desc">Seedling propagation tray made from recycled materials. Improves germination rate and simplifies transplanting. Designed for 50 seedlings per tray.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ Half a day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <!-- ============ WASTE & SANITATION ============ -->
+      <div class="project-card c-waste" data-cat="waste" data-keywords="waste compost worm vermicompost organic fertiliser">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/compost,soil,organic?lock=13" alt="Vermicompost Bin" loading="lazy">
+          <span class="card-cat-badge">Waste &amp; Sanitation</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Vermicompost Bin</div>
+          <div class="card-desc">Worm-based composting system made from local materials. Converts kitchen and organic waste into high-quality fertiliser. Odour-free when managed correctly.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1 day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-waste" data-cat="waste" data-keywords="waste sanitation latrine pit toilet VIP ventilated improved fly odour">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/sanitation,rural?lock=14" alt="VIP Latrine" loading="lazy">
+          <span class="card-cat-badge">Waste &amp; Sanitation</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Ventilated Improved Pit Latrine</div>
+          <div class="card-desc">Superstructure and ventilation design for a VIP latrine. The vent pipe removes odours and traps flies, significantly improving safety and user experience.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 4–7 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-waste" data-cat="waste" data-keywords="sanitation urine diversion toilet dry UDDT faeces nutrient recovery">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/sanitation,hygiene?lock=15" alt="Urine-Diverting Toilet" loading="lazy">
+          <span class="card-cat-badge">Waste &amp; Sanitation</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Urine-Diverting Dry Toilet</div>
+          <div class="card-desc">Separates urine from faeces at source for safer, lower-volume handling. Urine stored separately can be used directly as fertiliser after a short storage period.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div>&nbsp;Advanced</div>
+            <div class="meta-item">⏱ 5–10 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-waste" data-cat="waste" data-keywords="waste biochar kiln reactor pyrolysis charcoal biomass soil amendment">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/charcoal,fire?lock=16" alt="Biochar Kiln" loading="lazy">
+          <span class="card-cat-badge">Waste &amp; Sanitation</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Biochar Kiln (TLUD)</div>
+          <div class="card-desc">Top-lit updraft kiln for producing biochar from agricultural waste. Biochar improves soil water retention and fertility when incorporated into fields.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–3 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-waste" data-cat="waste" data-keywords="waste sorting station bins three-bin dry wet household community">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/recycling,waste?lock=17" alt="Waste Sorting Station" loading="lazy">
+          <span class="card-cat-badge">Waste &amp; Sanitation</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Three-Bin Waste Sorting Station</div>
+          <div class="card-desc">Three-compartment sorting station for dry, organic, and hazardous waste. Designed for households or community use. Colour-coded with pictogram labels.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1 day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-waste" data-cat="waste" data-keywords="waste fecal sludge container transport stackable sanitation">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/container,transport?lock=18" alt="Fecal Sludge Container" loading="lazy">
+          <span class="card-cat-badge">Waste &amp; Sanitation</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Fecal Sludge Transport Container</div>
+          <div class="card-desc">Stackable, sealable container for transporting fecal sludge from pit latrines to treatment sites. Designed to minimise leaks and exposure during manual emptying.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–3 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <!-- ============ MUSHROOM FARMING ============ -->
+      <div class="project-card c-mushroom" data-cat="mushroom" data-keywords="mushroom substrate mixer paddle low cost preparation cultivation">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/mushroom,farming?lock=19" alt="Mushroom Substrate Mixer" loading="lazy">
+          <span class="card-cat-badge">Mushroom Farming</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Mushroom Substrate Mixer</div>
+          <div class="card-desc">Low-cost paddle mixer for preparing mushroom growing substrate. Ensures even hydration and mixing of supplements. Reduces manual labour for medium-scale operations.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 3–5 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-mushroom" data-cat="mushroom" data-keywords="mushroom pasteurization drum steam substrate 200 litre stove heat">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/steam,drum?lock=20" alt="Pasteurization Drum" loading="lazy">
+          <span class="card-cat-badge">Mushroom Farming</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Pasteurization Drum</div>
+          <div class="card-desc">Steam pasteurization unit using a 200 L drum and wood-fired stove. Treats up to 50 kg of substrate per batch. Simple construction from widely available materials.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1–2 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-mushroom" data-cat="mushroom" data-keywords="mushroom growing shelf bamboo tiered rack bags vertical cultivation">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/mushroom,oyster?lock=21" alt="Tiered Growing Shelf" loading="lazy">
+          <span class="card-cat-badge">Mushroom Farming</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Tiered Growing Shelf</div>
+          <div class="card-desc">Space-efficient tiered shelf for hanging mushroom growing bags. Made from bamboo or timber. Holds up to 60 bags per unit in a 2 m² footprint.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1–2 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-mushroom" data-cat="mushroom" data-keywords="mushroom spawn inoculation workbench laminar flow clean room contamination">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/mushroom,laboratory?lock=22" alt="Inoculation Workbench" loading="lazy">
+          <span class="card-cat-badge">Mushroom Farming</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Simple Inoculation Workbench</div>
+          <div class="card-desc">Low-tech inoculation station that reduces contamination during spawn transfer. Uses a glove box design with a HEPA filter and UV light for sterilisation.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–3 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-mushroom" data-cat="mushroom" data-keywords="mushroom humidity tent plastic sheet growing room climate misting">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/greenhouse,plants?lock=23" alt="Humidity Tent" loading="lazy">
+          <span class="card-cat-badge">Mushroom Farming</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Low-Cost Humidity Tent</div>
+          <div class="card-desc">Plastic-sheeting tent that maintains high humidity for mushroom fruiting. Includes a manual misting system from a garden sprayer and PVC pipe manifold.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ Half a day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-mushroom" data-cat="mushroom" data-keywords="mushroom harvesting trolley cart wheel transport collecting scale">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/harvest,farm,cart?lock=24" alt="Harvest Trolley" loading="lazy">
+          <span class="card-cat-badge">Mushroom Farming</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Harvest &amp; Transport Trolley</div>
+          <div class="card-desc">Wheeled cart for collecting and weighing mushroom harvests. Holds 20 kg, built from angle iron and bicycle wheels. Includes a hook bar for weighing bags.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–3 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <!-- ============ BIOGAS ============ -->
+      <div class="project-card c-biogas" data-cat="biogas" data-keywords="biogas fixed dome digester household underground manure food waste cooking">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/biogas,energy?lock=25" alt="Fixed-Dome Digester" loading="lazy">
+          <span class="card-cat-badge">Biogas</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Fixed-Dome Biogas Digester</div>
+          <div class="card-desc">Underground fixed-dome digester for household biogas production. Runs on animal manure or food waste. Provides cooking gas and nutrient-rich digestate.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div>&nbsp;Advanced</div>
+            <div class="meta-item">⏱ 1–2 weeks</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-biogas" data-cat="biogas" data-keywords="biogas flexible bag tubular digester polyethylene low cost trench">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/biogas,renewable?lock=26" alt="Flexible Bag Digester" loading="lazy">
+          <span class="card-cat-badge">Biogas</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Flexible Bag Digester</div>
+          <div class="card-desc">Low-cost polyethylene tubular digester laid in a trench. Simpler and cheaper than a fixed-dome design. Produces gas within 2–4 weeks of loading.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–4 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-biogas" data-cat="biogas" data-keywords="biogas stove burner cooking two-burner low pressure household kitchen">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/cooking,stove,fire?lock=27" alt="Biogas Cooking Stove" loading="lazy">
+          <span class="card-cat-badge">Biogas</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Biogas Cooking Stove</div>
+          <div class="card-desc">2-burner cooking stove adapted for low-pressure biogas. Replaces wood fuel for household cooking. Reduces cooking time and indoor air pollution significantly.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1 day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-biogas" data-cat="biogas" data-keywords="biogas pressure gauge manometer monitoring safety low cost">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/gauge,pressure?lock=28" alt="Biogas Pressure Gauge" loading="lazy">
+          <span class="card-cat-badge">Biogas</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Biogas Pressure Gauge</div>
+          <div class="card-desc">Water-column manometer for monitoring biogas pressure in household digesters. Made from clear plastic tubing. Costs under USD 2 in materials.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ 1–2 hours</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-biogas" data-cat="biogas" data-keywords="biogas slurry agitator stirrer manual mixing digester performance">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/mixing,organic?lock=29" alt="Manual Slurry Agitator" loading="lazy">
+          <span class="card-cat-badge">Biogas</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Manual Slurry Agitator</div>
+          <div class="card-desc">Hand-cranked paddle agitator for mixing slurry inside a biogas digester. Prevents scum layer formation and improves gas yield by up to 25%.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>&nbsp;Intermediate</div>
+            <div class="meta-item">⏱ 2–3 days</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+      <div class="project-card c-biogas" data-cat="biogas" data-keywords="biogas gas storage bag flexible low cost buffer polyethylene">
+        <a href="project.html" class="card-main-link"><div class="card-image">
+          <img src="https://loremflickr.com/600/340/energy,storage?lock=30" alt="Flexible Gas Storage Bag" loading="lazy">
+          <span class="card-cat-badge">Biogas</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Flexible Gas Storage Bag</div>
+          <div class="card-desc">Low-cost flexible polyethylene storage bag for buffering biogas supply. Compensates for variable production and usage patterns throughout the day.</div>
+          <div class="card-meta">
+            <div class="meta-item"><div class="difficulty"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>&nbsp;Basic</div>
+            <div class="meta-item">⏱ Half a day</div>
+          </div>
+        </div>
+        </a>
+        <div class="card-footer">
+          <a href="#" class="btn-download" data-i18n="card.download">⬇ Download Plans</a>
+        </div>
+      </div>
+
+    </div><!-- /#projects-grid -->
+
+    <div class="no-results" id="no-results" style="display:none;">
+      <h3>No projects found</h3>
+      <p>Try a different search term or clear the category filter.</p>
+    </div>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="footer-logo-name">
+          <svg viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg" aria-label="ETH Zurich"><path d="M43.6892 7.59685H39.3218L40.8555 0H3.90295L0 19.6252H14.7315L15.7334 14.5606H7.02833L7.52612 12.0283H16.2369L17.1209 7.59685H8.43034L8.92687 5.06457H22.7592L19.8638 19.6252H25.8707L28.7649 5.06457H33.8077L30.9135 19.6252H36.9665L38.4642 12.0283H42.8303L41.3338 19.6252H47.3577L51.2632 0H45.2229L43.6892 7.59685Z"/></svg>
+          GHE for Practitioners
+        </div>
+        <p>Free building plans from ETH Zurich's Global Health Engineering group — designed for practitioners in low-resource settings.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.cat">Categories</h4>
+        <ul>
+          <li><a href="projects.html?cat=water">💧 Water</a></li>
+          <li><a href="projects.html?cat=agriculture">🌱 Agriculture</a></li>
+          <li><a href="projects.html?cat=waste">♻️ Waste &amp; Sanitation</a></li>
+          <li><a href="projects.html?cat=mushroom">🍄 Mushroom Farming</a></li>
+          <li><a href="projects.html?cat=biogas">🔥 Biogas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.links">Links</h4>
+        <ul>
+          <li><a href="https://ghe.ethz.ch/">GHE Official Site</a></li>
+          <li><a href="https://ghe.ethz.ch/research.html">Research</a></li>
+          <li><a href="https://ghe.ethz.ch/ghe-blog-news.html">Blog &amp; News</a></li>
+          <li><a href="mailto:ghe@ethz.ch">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Global Health Engineering, ETH Zurich — Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+      <span><a href="https://ethz.ch/en.html">ETH Zurich</a> · <a href="#">Imprint</a> · <a href="#">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const searchInput = document.getElementById('project-search');
+  const filterBtns  = document.querySelectorAll('.filter-btn');
+  const cards       = document.querySelectorAll('.project-card');
+  const countEl     = document.getElementById('result-count');
+  const noResults   = document.getElementById('no-results');
+  let activeFilter  = 'all';
+  let searchTerm    = '';
+
+  function applyFilters() {
+    let visible = 0;
+    cards.forEach(function (card) {
+      const cat  = card.dataset.cat || '';
+      const kw   = (card.dataset.keywords || '') + ' ' +
+                   (card.querySelector('.card-title')?.textContent || '') + ' ' +
+                   (card.querySelector('.card-desc')?.textContent || '');
+      const show = (activeFilter === 'all' || cat === activeFilter) &&
+                   (searchTerm === '' || kw.toLowerCase().includes(searchTerm.toLowerCase()));
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    countEl.textContent = visible + (visible === 1 ? ' project' : ' projects');
+    noResults.style.display = visible === 0 ? '' : 'none';
+  }
+
+  searchInput.addEventListener('input', function () {
+    searchTerm = this.value.trim();
+    applyFilters();
+  });
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      activeFilter = this.dataset.cat;
+      applyFilters();
+    });
+  });
+
+  // Read URL params on load
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('cat')) {
+    const cat = params.get('cat');
+    filterBtns.forEach(function (b) {
+      if (b.dataset.cat === cat) {
+        filterBtns[0].classList.remove('active');
+        b.classList.add('active');
+        activeFilter = cat;
+      }
+    });
+  }
+  if (params.get('q')) {
+    searchInput.value = params.get('q');
+    searchTerm = params.get('q');
+  }
+  applyFilters();
+})();
+</script>
+
+  <script src="js/i18n.js"></script>
+</body>
+</html>
