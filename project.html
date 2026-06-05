@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar Pasteurizer (WAPI) — GHE for Practitioners | ETH Zurich</title>
+  <title>Project — GHE - Open Builds | ETH Zurich</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
     .project-detail { padding: 2.5rem 0 4rem; background: white; }
@@ -26,7 +26,7 @@
     .detail-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 1.5rem; margin-bottom: 1.75rem; }
     .spec-item { display: flex; flex-direction: column; gap: 0.15rem; }
     .spec-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-light); }
-    .spec-value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+    .spec-value { font-size: 0.95rem; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 0.3rem; }
 
     .detail-download {
       display: inline-flex; align-items: center; gap: 0.4rem;
@@ -48,11 +48,9 @@
     .detail-col li { font-size: 0.875rem; color: var(--text-mid); padding: 0.3rem 0; border-bottom: 1px solid var(--warm-50); display: flex; align-items: baseline; gap: 0.5rem; }
     .detail-col li::before { content: "–"; color: var(--text-light); flex-shrink: 0; }
 
-    .placeholder-note {
-      background: var(--warm-50); border: 1px solid var(--warm-100); border-radius: 6px;
-      padding: 1rem 1.25rem; font-size: 0.875rem; color: var(--text-mid);
-      margin-bottom: 1.5rem; font-style: italic;
-    }
+    .not-found { padding: 4rem 0; text-align: center; }
+    .not-found h2 { font-size: 1.4rem; margin-bottom: 0.75rem; }
+    .not-found a { color: var(--olive); font-weight: 600; }
 
     @media (max-width: 800px) {
       .detail-grid { grid-template-columns: 1fr; }
@@ -72,7 +70,7 @@
     <span class="sep">&#8250;</span>
     <a href="https://ghe.ethz.ch/">Global Health Engineering</a>
     <span class="sep">&#8250;</span>
-    <span style="color:rgba(255,255,255,0.55)">For Practitioners</span>
+    <span style="color:rgba(255,255,255,0.55)">Open Builds</span>
   </div>
 </div>
 
@@ -81,7 +79,7 @@
   <div class="container">
     <a href="index.html" class="header-brand">
       <img src="ghe_logo.jpg" alt="Global Health Engineering" class="site-logo" width="100" height="56">
-      <span class="site-subtitle" data-i18n="header.subtitle">ETH Zurich · For Practitioners</span>
+      <span class="site-subtitle" data-i18n="header.subtitle">ETH Zurich · Open Builds</span>
     </a>
     <div class="lang-switcher">
       <button class="lang-btn" data-lang="en">English</button>
@@ -104,102 +102,87 @@
   </div>
 </nav>
 
-<!-- ===== PROJECT DETAIL ===== -->
+<!-- ===== BACK LINK ===== -->
 <div class="search-bar-section">
   <div class="container">
     <a href="projects.html" class="detail-back" data-i18n="detail.back">← Back to all projects</a>
   </div>
 </div>
 
+<!-- ===== PROJECT DETAIL ===== -->
 <main class="project-detail">
   <div class="container">
 
-    <!-- Image + key info -->
-    <div class="detail-grid">
-      <div class="detail-image">
-        <img src="https://loremflickr.com/800/500/solar,water?lock=1" alt="Solar Pasteurizer (WAPI)">
-      </div>
-      <div class="detail-info">
-        <span class="detail-cat-badge">Water</span>
-        <h1 class="detail-title">Solar Pasteurizer (WAPI)</h1>
-        <p class="detail-lead">A simple, low-cost device that uses a small wax indicator to confirm when water has been safely pasteurized using solar heat. No fuel, no electricity, and no moving parts required.</p>
-
-        <div class="detail-specs">
-          <div class="spec-item">
-            <span class="spec-label">Difficulty</span>
-            <span class="spec-value">⬤◯◯ Basic</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Build time</span>
-            <span class="spec-value">1–2 days</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Estimated cost</span>
-            <span class="spec-value">USD 2–5</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Treats</span>
-            <span class="spec-value">~1 L per cycle</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Tools required</span>
-            <span class="spec-value">Scissors, needle</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Developed by</span>
-            <span class="spec-value">GHE student project</span>
-          </div>
-        </div>
-
-        <a href="#" class="detail-download" data-i18n="detail.download">⬇ Download Full Plans (PDF)</a>
-      </div>
+    <div id="project-not-found" class="not-found" style="display:none;">
+      <h2>Project not found.</h2>
+      <p><a href="projects.html">← Back to all projects</a></p>
     </div>
 
-    <!-- Description + materials + steps -->
-    <div class="detail-body">
+    <div id="project-content">
 
-      <div class="placeholder-note">
-        This is a template page. Full project descriptions, material lists, and step-by-step instructions will be added for each project.
+      <!-- Image + key info -->
+      <div class="detail-grid">
+        <div class="detail-image">
+          <img id="project-image" src="" alt="" loading="lazy">
+        </div>
+        <div class="detail-info">
+          <span class="detail-cat-badge" id="project-cat-badge"></span>
+          <h1 class="detail-title" id="project-title"></h1>
+          <p class="detail-lead" id="project-lead"></p>
+
+          <div class="detail-specs">
+            <div class="spec-item">
+              <span class="spec-label">Difficulty</span>
+              <span class="spec-value" id="spec-difficulty"></span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Build time</span>
+              <span class="spec-value" id="spec-buildtime"></span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Estimated cost</span>
+              <span class="spec-value" id="spec-cost"></span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Output / capacity</span>
+              <span class="spec-value" id="spec-output"></span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Tools required</span>
+              <span class="spec-value" id="spec-tools"></span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Developed by</span>
+              <span class="spec-value" id="spec-devby"></span>
+            </div>
+          </div>
+
+          <a href="#" class="detail-download" data-i18n="detail.download">⬇ Download Full Plans (PDF)</a>
+        </div>
       </div>
 
-      <h2>How it works</h2>
-      <p>The WAPI (Water Pasteurization Indicator) is a small plastic tube containing a food-grade wax with a melting point of 70°C. The tube is suspended in the water container during solar heating. When the wax melts and floats to the top, the water has reached pasteurization temperature and is safe to drink — even if it has not boiled.</p>
-      <p>Solar pasteurization requires sustained temperatures above 65°C for several minutes, which kills all major waterborne pathogens including bacteria, viruses, and protozoa. The WAPI provides a reliable visual indicator without any electronic components.</p>
+      <!-- Description + materials + steps -->
+      <div class="detail-body">
+        <h2 data-i18n="detail.howworks">How it works</h2>
+        <div id="how-it-works"></div>
 
-      <div class="detail-columns">
-        <div class="detail-col">
-          <h3>Materials</h3>
-          <ul>
-            <li>Small plastic tube (3–5 cm)</li>
-            <li>Food-grade wax (beeswax or soy)</li>
-            <li>Nylon fishing line (30 cm)</li>
-            <li>Small weight (nut or washer)</li>
-            <li>Cork or stopper</li>
-          </ul>
-        </div>
-        <div class="detail-col">
-          <h3>Tools</h3>
-          <ul>
-            <li>Scissors or craft knife</li>
-            <li>Small saucepan (for wax melting)</li>
-            <li>Needle or thin wire</li>
-            <li>Heat source (stove or fire)</li>
-          </ul>
-        </div>
-        <div class="detail-col">
-          <h3>Key steps</h3>
-          <ul>
-            <li>Melt wax and pour into tube</li>
-            <li>Insert fishing line while wax is liquid</li>
-            <li>Allow to cool and set</li>
-            <li>Attach weight to lower end of line</li>
-            <li>Seal top with cork</li>
-            <li>Calibrate with boiling water test</li>
-          </ul>
+        <div class="detail-columns">
+          <div class="detail-col">
+            <h3 data-i18n="detail.materials">Materials</h3>
+            <ul id="materials-list"></ul>
+          </div>
+          <div class="detail-col">
+            <h3 data-i18n="detail.tools">Tools</h3>
+            <ul id="tools-list"></ul>
+          </div>
+          <div class="detail-col">
+            <h3 data-i18n="detail.steps">Key steps</h3>
+            <ul id="steps-list"></ul>
+          </div>
         </div>
       </div>
 
-    </div>
+    </div><!-- /#project-content -->
 
   </div>
 </main>
@@ -209,7 +192,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-about">
-        <div class="footer-logo-name">GHE for Practitioners</div>
+        <div class="footer-logo-name">GHE - Open Builds</div>
         <p>Free building plans from ETH Zurich's Global Health Engineering group — for practitioners in low-resource settings.</p>
       </div>
       <div class="footer-col">
@@ -231,6 +214,9 @@
         </ul>
       </div>
     </div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.3);padding:0.5rem 0;border-top:1px solid rgba(255,255,255,0.07);">
+      Project photos: <a href="https://commons.wikimedia.org/" style="color:rgba(255,255,255,0.4)">Wikimedia Commons</a> contributors — CC BY / CC BY-SA licenses. See each image page for full attribution.
+    </div>
     <div class="footer-bottom">
       <span>© 2025 Global Health Engineering, ETH Zurich — <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
       <span><a href="https://ethz.ch/en.html">ETH Zurich</a> · <a href="#">Imprint</a> · <a href="#">Privacy</a></span>
@@ -238,6 +224,61 @@
   </div>
 </footer>
 
-  <script src="js/i18n.js"></script>
+<script src="js/projects.js"></script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var id = parseInt(params.get('id'), 10);
+  var p = PROJECTS.find(function (x) { return x.id === id; });
+
+  if (!p) {
+    document.getElementById('project-content').style.display = 'none';
+    document.getElementById('project-not-found').style.display = '';
+    return;
+  }
+
+  var catColors = {
+    'c-water':    '#2a8fa0',
+    'c-agri':     '#4a8c2a',
+    'c-waste':    '#7a5c35',
+    'c-mushroom': '#b87820',
+    'c-biogas':   '#c45a28'
+  };
+
+  document.title = p.title + ' — GHE - Open Builds | ETH Zurich';
+
+  var badge = document.getElementById('project-cat-badge');
+  badge.textContent = p.catLabel;
+  badge.style.background = catColors[p.catClass] || '#3d6b22';
+
+  var img = document.getElementById('project-image');
+  img.src = p.image;
+  img.alt = p.title;
+
+  document.getElementById('project-title').textContent = p.title;
+  document.getElementById('project-lead').textContent = p.lead;
+
+  var diffHTML = {
+    1: '<span class="difficulty"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span>&nbsp;Basic',
+    2: '<span class="difficulty"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span>&nbsp;Intermediate',
+    3: '<span class="difficulty"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></span>&nbsp;Advanced'
+  };
+  document.getElementById('spec-difficulty').innerHTML = diffHTML[p.difficulty] || '';
+  document.getElementById('spec-buildtime').textContent = p.buildTime;
+  document.getElementById('spec-cost').textContent = p.cost;
+  document.getElementById('spec-output').textContent = p.output;
+  document.getElementById('spec-tools').textContent = p.toolsRequired;
+  document.getElementById('spec-devby').textContent = p.developedBy;
+
+  document.getElementById('how-it-works').innerHTML =
+    p.howItWorks.map(function (para) { return '<p>' + para + '</p>'; }).join('');
+
+  ['materials', 'tools', 'steps'].forEach(function (key) {
+    document.getElementById(key + '-list').innerHTML =
+      p[key].map(function (item) { return '<li>' + item + '</li>'; }).join('');
+  });
+})();
+</script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GHE for Practitioners — Global Health Engineering | ETH Zurich</title>
+  <title>GHE - Open Builds — Global Health Engineering | ETH Zurich</title>
   <meta name="description" content="Free building plans and practical guides for low-resource settings from ETH Zurich's Global Health Engineering group.">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +18,7 @@
     <span class="sep">&#8250;</span>
     <a href="https://ghe.ethz.ch/">Global Health Engineering</a>
     <span class="sep">&#8250;</span>
-    <span style="color:rgba(255,255,255,0.55)">For Practitioners</span>
+    <span style="color:rgba(255,255,255,0.55)">Open Builds</span>
   </div>
 </div>
 
@@ -78,7 +78,7 @@
 
       <div class="project-card c-water">
         <a href="project.html" class="card-main-link"><div class="card-image">
-          <img src="https://loremflickr.com/600/340/solar,water?lock=1" alt="Solar Pasteurizer" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Water_Pasteurization_Indicator.jpg" alt="Solar Pasteurizer" loading="lazy">
           <span class="card-cat-badge">Water</span>
         </div>
         <div class="card-body">
@@ -97,7 +97,7 @@
 
       <div class="project-card c-mushroom">
         <a href="project.html" class="card-main-link"><div class="card-image">
-          <img src="https://loremflickr.com/600/340/mushroom,farming?lock=19" alt="Mushroom Substrate Mixer" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Oyster_mushroom1.JPG" alt="Mushroom Substrate Mixer" loading="lazy">
           <span class="card-cat-badge">Mushroom Farming</span>
         </div>
         <div class="card-body">
@@ -116,7 +116,7 @@
 
       <div class="project-card c-agri">
         <a href="project.html" class="card-main-link"><div class="card-image">
-          <img src="https://loremflickr.com/600/340/fence,farm?lock=7" alt="Origami Fencing" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Livestock_fence.jpg" alt="Origami Fencing" loading="lazy">
           <span class="card-cat-badge">Agriculture</span>
         </div>
         <div class="card-body">
@@ -135,7 +135,7 @@
 
       <div class="project-card c-biogas">
         <a href="project.html" class="card-main-link"><div class="card-image">
-          <img src="https://loremflickr.com/600/340/biogas,energy?lock=25" alt="Fixed-Dome Biogas Digester" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Construction_of_fixed-dome_biogas_plant_near_Hanoi_(3282051499).jpg" alt="Fixed-Dome Biogas Digester" loading="lazy">
           <span class="card-cat-badge">Biogas</span>
         </div>
         <div class="card-body">
@@ -154,7 +154,7 @@
 
       <div class="project-card c-waste">
         <a href="project.html" class="card-main-link"><div class="card-image">
-          <img src="https://loremflickr.com/600/340/compost,soil,organic?lock=13" alt="Vermicompost Bin" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eisenia_fetida_on_compost_bin.jpg" alt="Vermicompost Bin" loading="lazy">
           <span class="card-cat-badge">Waste &amp; Sanitation</span>
         </div>
         <div class="card-body">
@@ -173,7 +173,7 @@
 
       <div class="project-card c-agri">
         <a href="project.html" class="card-main-link"><div class="card-image">
-          <img src="https://loremflickr.com/600/340/irrigation,agriculture?lock=8" alt="Treadle Pump" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Treadle_pump_in_Bangladesh.jpg" alt="Treadle Pump" loading="lazy">
           <span class="card-cat-badge">Agriculture</span>
         </div>
         <div class="card-body">
@@ -204,7 +204,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-about">
-        <div class="footer-logo-name">GHE for Practitioners</div>
+        <div class="footer-logo-name">GHE - Open Builds</div>
         <p>Free building plans from ETH Zurich's Global Health Engineering group — for practitioners in low-resource settings.</p>
       </div>
       <div class="footer-col">
@@ -226,6 +226,9 @@
         </ul>
       </div>
     </div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.3);padding:0.5rem 0;border-top:1px solid rgba(255,255,255,0.07);">
+      Project photos: <a href="https://commons.wikimedia.org/" style="color:rgba(255,255,255,0.4)">Wikimedia Commons</a> contributors — CC BY / CC BY-SA licenses. See each image page for full attribution.
+    </div>
     <div class="footer-bottom">
       <span>© 2025 Global Health Engineering, ETH Zurich — <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
       <span><a href="https://ethz.ch/en.html">ETH Zurich</a> · <a href="#">Imprint</a> · <a href="#">Privacy</a></span>
@@ -233,6 +236,14 @@
   </div>
 </footer>
 
+  <script src="js/projects.js"></script>
+  <script>
+  // Featured cards are projects 1, 19, 7, 25, 13, 8 in DOM order
+  var featuredIds = [1, 19, 7, 25, 13, 8];
+  document.querySelectorAll('.projects-grid .card-main-link').forEach(function (link, i) {
+    if (featuredIds[i] !== undefined) link.href = 'project.html?id=' + featuredIds[i];
+  });
+  </script>
   <script src="js/i18n.js"></script>
 </body>
 </html>
